@@ -31,6 +31,7 @@
 		D23759EF19EA995F007FB7C4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D23759E319EA9906007FB7C4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D23759F619EAA287007FB7C4 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759F519EAA287007FB7C4 /* Ad.swift */; };
 		D23759F819EAB503007FB7C4 /* AdListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759F719EAB503007FB7C4 /* AdListViewController.swift */; };
+		D23759FA19EABBC6007FB7C4 /* AdListingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759F919EABBC6007FB7C4 /* AdListingCellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		D23759F519EAA287007FB7C4 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
 		D23759F719EAB503007FB7C4 /* AdListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdListViewController.swift; sourceTree = "<group>"; };
+		D23759F919EABBC6007FB7C4 /* AdListingCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdListingCellViewController.swift; path = ../AdListingCellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +158,7 @@
 				D23759D519EA47E3007FB7C4 /* GeoMarketAPI.swift */,
 				D23759D719EA5A21007FB7C4 /* User.swift */,
 				D23759F519EAA287007FB7C4 /* Ad.swift */,
-				D23759F719EAB503007FB7C4 /* AdListViewController.swift */,
+				D23759FB19EAC30B007FB7C4 /* Ad Listing */,
 			);
 			path = GeoMarket;
 			sourceTree = "<group>";
@@ -228,6 +230,15 @@
 				D23759A519E9F129007FB7C4 /* NewItemViewController.swift */,
 			);
 			name = AdManagement;
+			sourceTree = "<group>";
+		};
+		D23759FB19EAC30B007FB7C4 /* Ad Listing */ = {
+			isa = PBXGroup;
+			children = (
+				D23759F919EABBC6007FB7C4 /* AdListingCellViewController.swift */,
+				D23759F719EAB503007FB7C4 /* AdListViewController.swift */,
+			);
+			name = "Ad Listing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +352,7 @@
 				D23759F619EAA287007FB7C4 /* Ad.swift in Sources */,
 				D23759F819EAB503007FB7C4 /* AdListViewController.swift in Sources */,
 				D237598619E9CDB9007FB7C4 /* AppDelegate.swift in Sources */,
+				D23759FA19EABBC6007FB7C4 /* AdListingCellViewController.swift in Sources */,
 				D23759D819EA5A21007FB7C4 /* User.swift in Sources */,
 				D23759D619EA47E3007FB7C4 /* GeoMarketAPI.swift in Sources */,
 				D23759A619E9F129007FB7C4 /* NewItemViewController.swift in Sources */,

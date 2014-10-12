@@ -12,8 +12,9 @@ import Alamofire
 
 class GeoMarketAPI{
     
-    var baseURL = "http://172.31.183.102:3001" //"http://geomarket.me:3001"
+    var baseURL = "http://geomarket.me:3001" //"http://172.31.183.102:3001"
     var user : User?
+    var distamce: Float? = 0.0
     
     
     //Create a singleton instance
@@ -153,6 +154,54 @@ class GeoMarketAPI{
             }
         
         
+    }
+    
+    func getLocalAds(success:((options:NSArray)->())?,error:(()->())?){
+        Alamofire.request(.GET, "\(GeoMarketAPI.sharedInstance.baseURL)/ads?accessToken=\(GeoMarketAPI.sharedInstance.user?.authToken as NSString!)", parameters: nil, encoding: .JSON).responseString{ (request, response, data, reqError) -> Void in
+            println(response)
+            if(response?.statusCode == 200){
+                
+                var convertedData: NSData = (data! as String).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
+                var responseJSON : NSDictionary = NSJSONSerialization.JSONObjectWithData(convertedData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                var options = responseJSON["data"]!["ads"]! as NSArray
+                
+                if(success != nil){
+                    println(options)
+                    success!(options: options)
+                }
+            }else{
+                // User failed authentication
+                if(error != nil)
+                {
+                    error!();
+                }
+            }
+            
+        }
+    }
+    
+    func searchAds(searchTerms: String, success:((options:NSArray)->())?,error:(()->())?){
+        Alamofire.request(.GET, "\(GeoMarketAPI.sharedInstance.baseURL)/ads?accessToken=\(GeoMarketAPI.sharedInstance.user?.authToken as NSString!)", parameters: nil, encoding: .JSON).responseString{ (request, response, data, reqError) -> Void in
+            println(response)
+            if(response?.statusCode == 200){
+                
+                var convertedData: NSData = (data! as String).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
+                var responseJSON : NSDictionary = NSJSONSerialization.JSONObjectWithData(convertedData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                var options = responseJSON["data"]!["ads"]! as NSArray
+                
+                if(success != nil){
+                    println(options)
+                    success!(options: options)
+                }
+            }else{
+                // User failed authentication
+                if(error != nil)
+                {
+                    error!();
+                }
+            }
+            
+        }
     }
     
 }
