@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1A5-5i-CC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1A5-5i-CC9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -207,11 +207,11 @@
             </objects>
             <point key="canvasLocation" x="249" y="-340"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="80O-oM-hoN">
             <objects>
-                <tableViewController id="ooa-bu-P7w" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="WIG-rm-baU">
+                <tableViewController id="ooa-bu-P7w" customClass="SettingsViewController" customModule="GeoMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="50" sectionHeaderHeight="10" sectionFooterHeight="10" id="WIG-rm-baU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -223,13 +223,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Hello" tableViewCell="dS5-HF-Z8f" id="C4x-EZ-vip">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Update Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrm-ii-uA7">
-                                                    <rect key="frame" x="266" y="14" width="104" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Update Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrm-ii-uA7">
+                                                    <rect key="frame" x="33" y="11" width="104" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Yrm-ii-uA7" firstAttribute="leading" secondItem="C4x-EZ-vip" secondAttribute="leadingMargin" constant="25" id="MbW-ZH-VTK"/>
+                                                <constraint firstAttribute="centerY" secondItem="Yrm-ii-uA7" secondAttribute="centerY" id="uFB-8h-3Ao"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="prc-zI-Mt8">
@@ -237,19 +241,48 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="prc-zI-Mt8" id="gNP-eD-BE1">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o37-cJ-ysC">
-                                                    <rect key="frame" x="252" y="11" width="141" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Change Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o37-cJ-ysC">
+                                                    <rect key="frame" x="34" y="11" width="141" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="o37-cJ-ysC" secondAttribute="centerY" constant="0.5" id="AJV-tb-WkX"/>
+                                                <constraint firstItem="o37-cJ-ysC" firstAttribute="leading" secondItem="gNP-eD-BE1" secondAttribute="leadingMargin" constant="26" id="Ktz-Cc-U9t"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hUu-68-O7Y">
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Search Options" id="fSX-Rz-7Tc">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OFU-o5-FP3">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hUu-68-O7Y" id="WzA-dQ-QI5">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OFU-o5-FP3" id="D4H-LV-SpA">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-fE-s7n">
+                                                    <rect key="frame" x="534" y="12" width="38" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="ban-fi-ohz">
+                                                    <rect key="frame" x="61" y="7" width="364" height="31"/>
+                                                    <connections>
+                                                        <action selector="sliderValueChanged:" destination="ooa-bu-P7w" eventType="valueChanged" id="m29-Fh-PNi"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Gh9-fE-s7n" secondAttribute="trailing" constant="20" id="GDv-WZ-7pp"/>
+                                                <constraint firstItem="ban-fi-ohz" firstAttribute="leading" secondItem="D4H-LV-SpA" secondAttribute="leadingMargin" constant="55" id="PzU-YA-Xet"/>
+                                                <constraint firstItem="Gh9-fE-s7n" firstAttribute="top" secondItem="D4H-LV-SpA" secondAttribute="topMargin" constant="4" id="Tx6-ub-xcC"/>
+                                                <constraint firstItem="ban-fi-ohz" firstAttribute="top" secondItem="D4H-LV-SpA" secondAttribute="topMargin" constant="-1" id="bOU-1L-iid"/>
+                                                <constraint firstItem="Gh9-fE-s7n" firstAttribute="leading" secondItem="ban-fi-ohz" secondAttribute="trailing" constant="111" id="bw5-YU-EgE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -260,10 +293,14 @@
                             <outlet property="delegate" destination="ooa-bu-P7w" id="wLl-b4-87W"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="loadSlider" destination="ban-fi-ohz" id="989-Ft-mfc"/>
+                        <outlet property="miles" destination="Gh9-fE-s7n" id="jVf-Ox-OAt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oB-6u-sIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1379" y="-1165"/>
+            <point key="canvasLocation" x="1379" y="-1170"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="1mz-GI-kdZ">
@@ -404,10 +441,10 @@
                                 <state key="normal" image="settingsBtn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ooa-bu-P7w" kind="show" id="Xhc-hK-8rM"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="ooa-bu-P7w" kind="show" id="6E5-wA-5m5"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0EF78FF19EAB96900F0F6AB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF78FE19EAB96900F0F6AB /* SettingsViewController.swift */; };
 		D237598619E9CDB9007FB7C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237598519E9CDB9007FB7C4 /* AppDelegate.swift */; };
 		D237598819E9CDB9007FB7C4 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237598719E9CDB9007FB7C4 /* HomeScreenViewController.swift */; };
 		D237598B19E9CDB9007FB7C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D237598919E9CDB9007FB7C4 /* Main.storyboard */; };
@@ -79,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B0EF78FE19EAB96900F0F6AB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D237598019E9CDB9007FB7C4 /* GeoMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D237598419E9CDB9007FB7C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D237598519E9CDB9007FB7C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				D237598519E9CDB9007FB7C4 /* AppDelegate.swift */,
 				D237598719E9CDB9007FB7C4 /* HomeScreenViewController.swift */,
+				B0EF78FE19EAB96900F0F6AB /* SettingsViewController.swift */,
 				D23759F419EAA26E007FB7C4 /* AdManagement */,
 				D237598919E9CDB9007FB7C4 /* Main.storyboard */,
 				D237598C19E9CDB9007FB7C4 /* Images.xcassets */,
@@ -338,6 +341,7 @@
 			files = (
 				D23759BB19EA1F37007FB7C4 /* LoginViewController.swift in Sources */,
 				D237598819E9CDB9007FB7C4 /* HomeScreenViewController.swift in Sources */,
+				B0EF78FF19EAB96900F0F6AB /* SettingsViewController.swift in Sources */,
 				D23759F619EAA287007FB7C4 /* Ad.swift in Sources */,
 				D23759F819EAB503007FB7C4 /* AdListViewController.swift in Sources */,
 				D237598619E9CDB9007FB7C4 /* AppDelegate.swift in Sources */,
