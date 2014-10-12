@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class SignUpViewController : UIViewController{
     
     @IBOutlet weak var emailTxt: UITextField!
@@ -21,5 +22,8 @@ class SignUpViewController : UIViewController{
     }
     
     @IBAction func registerUser(sender: AnyObject) {
+        GeoMarketAPI.registerUser(usernameTxt.text, email: emailTxt.text, password: passwordTxt.text, success: {()-> Void in
+            self.presentingViewController!.presentingViewController!.dismissViewControllerAnimated(true, nil)
+        })
     }
 }

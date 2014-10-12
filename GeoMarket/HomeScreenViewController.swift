@@ -24,7 +24,7 @@ class HomeScreenViewController : UIViewController, UITextFieldDelegate{
         
         if (userInfo.count == 0)
         {
-            //self.performSegueWithIdentifier("loginModal", sender: nil)
+            self.performSegueWithIdentifier("loginModal", sender: nil)
         }
     }
     
