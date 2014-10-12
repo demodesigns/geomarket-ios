@@ -29,6 +29,8 @@
 		D23759DA19EA8425007FB7C4 /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */; };
 		D23759EE19EA995F007FB7C4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23759E319EA9906007FB7C4 /* Alamofire.framework */; };
 		D23759EF19EA995F007FB7C4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D23759E319EA9906007FB7C4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D23759F619EAA287007FB7C4 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759F519EAA287007FB7C4 /* Ad.swift */; };
+		D23759F819EAB503007FB7C4 /* AdListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759F719EAB503007FB7C4 /* AdListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		D23759D719EA5A21007FB7C4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
 		D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		D23759F519EAA287007FB7C4 /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
+		D23759F719EAB503007FB7C4 /* AdListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,16 +147,16 @@
 			children = (
 				D237598519E9CDB9007FB7C4 /* AppDelegate.swift */,
 				D237598719E9CDB9007FB7C4 /* HomeScreenViewController.swift */,
-				D23759A519E9F129007FB7C4 /* NewItemViewController.swift */,
+				D23759F419EAA26E007FB7C4 /* AdManagement */,
 				D237598919E9CDB9007FB7C4 /* Main.storyboard */,
 				D237598C19E9CDB9007FB7C4 /* Images.xcassets */,
 				D237598E19E9CDB9007FB7C4 /* LaunchScreen.xib */,
+				D23759F319EAA259007FB7C4 /* UserLogin */,
 				D237598319E9CDB9007FB7C4 /* Supporting Files */,
-				D23759BA19EA1F37007FB7C4 /* LoginViewController.swift */,
-				D23759BC19EA1F43007FB7C4 /* SignUpViewController.swift */,
 				D23759D519EA47E3007FB7C4 /* GeoMarketAPI.swift */,
 				D23759D719EA5A21007FB7C4 /* User.swift */,
-				D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */,
+				D23759F519EAA287007FB7C4 /* Ad.swift */,
+				D23759F719EAB503007FB7C4 /* AdListViewController.swift */,
 			);
 			path = GeoMarket;
 			sourceTree = "<group>";
@@ -206,6 +210,24 @@
 				D23759E519EA9906007FB7C4 /* AlamofireTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D23759F319EAA259007FB7C4 /* UserLogin */ = {
+			isa = PBXGroup;
+			children = (
+				D23759BA19EA1F37007FB7C4 /* LoginViewController.swift */,
+				D23759BC19EA1F43007FB7C4 /* SignUpViewController.swift */,
+				D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */,
+			);
+			name = UserLogin;
+			sourceTree = "<group>";
+		};
+		D23759F419EAA26E007FB7C4 /* AdManagement */ = {
+			isa = PBXGroup;
+			children = (
+				D23759A519E9F129007FB7C4 /* NewItemViewController.swift */,
+			);
+			name = AdManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +338,8 @@
 			files = (
 				D23759BB19EA1F37007FB7C4 /* LoginViewController.swift in Sources */,
 				D237598819E9CDB9007FB7C4 /* HomeScreenViewController.swift in Sources */,
+				D23759F619EAA287007FB7C4 /* Ad.swift in Sources */,
+				D23759F819EAB503007FB7C4 /* AdListViewController.swift in Sources */,
 				D237598619E9CDB9007FB7C4 /* AppDelegate.swift in Sources */,
 				D23759D819EA5A21007FB7C4 /* User.swift in Sources */,
 				D23759D619EA47E3007FB7C4 /* GeoMarketAPI.swift in Sources */,

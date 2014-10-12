@@ -11,13 +11,13 @@ import UIKit
 import QuartzCore
 import CoreGraphics
 
-class NewItemViewController: UITableViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NewItemViewController: UITableViewController, UITextViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var descriptionTxt: UITextView!
     @IBOutlet weak var priceTxt: UITextField!
     @IBOutlet weak var titleTxt: UITextField!
-    @IBOutlet weak var productImg: UITableViewCell!
     @IBOutlet weak var selectFromCamRollBtn: UIButton!
     @IBOutlet weak var takePicBtn: UIButton!
+    @IBOutlet weak var productImage: UIImageView!
     
     
     override func viewWillAppear(animated: Bool) {
@@ -41,10 +41,6 @@ class NewItemViewController: UITableViewController, UITextViewDelegate, UIImageP
         
     }
     
-    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        self.hideKeyboard()
-    }
-    
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         if(text == "\n"){
             self.hideKeyboard()
@@ -54,8 +50,32 @@ class NewItemViewController: UITableViewController, UITextViewDelegate, UIImageP
         }
     }
     
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if(string == "\n"){
+            self.hideKeyboard()
+            return false;
+        }else{
+            return true;
+        }
+    }
+    
+    
     @IBAction func postForSale(sender: AnyObject) {
         self.hideKeyboard()
+        var listing: Ad = Ad(descript: descriptionTxt.text, title: titleTxt.text, price: (priceTxt.text as NSString).floatValue)
+        GeoMarketAPI.sharedInstance.postAd(titleTxt.text, descript: descriptionTxt.text, price: (priceTxt.text as NSString).floatValue, success: { (adID:NSString) -> () in
+            
+            GeoMarketAPI.sharedInstance.postAdImage(adID, image: self.productImage.image!, success: { () -> () in
+                
+            }, error: { () -> () in
+                
+            })
+            
+        }) { () -> () in
+            
+        }
+        
     }
     
     @IBAction func selectFromCameraRoll(sender: AnyObject) {
@@ -74,12 +94,13 @@ class NewItemViewController: UITableViewController, UITextViewDelegate, UIImageP
         self.presentViewController(picker, animated: true, completion: nil);
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo editingInfo: [NSObject : AnyObject]) {
         var chosenImage:UIImage = editingInfo[UIImagePickerControllerEditedImage] as UIImage;
-        productImg.imageView?.image = chosenImage;
+        productImage.image = chosenImage;
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func hideKeyboard() -> Void{
+    func hideKeyboard(){
         descriptionTxt.resignFirstResponder()
         priceTxt.resignFirstResponder()
         titleTxt.resignFirstResponder()

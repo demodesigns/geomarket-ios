@@ -12,7 +12,7 @@ import Alamofire
 
 class GeoMarketAPI{
     
-    let baseURL = "http://geomarket.me:3001"
+    var baseURL = "http://172.31.183.102:3001" //"http://geomarket.me:3001"
     var user : User?
     
     
@@ -36,7 +36,7 @@ class GeoMarketAPI{
             "password": password
         ]
         
-        Alamofire.request(.POST, "http://geomarket.me:3001/users/create", parameters: userInfo, encoding: .JSON).responseString { (request, response, data, reqError) -> Void in
+        Alamofire.request(.POST, "\(GeoMarketAPI.sharedInstance.baseURL)/users/create", parameters: userInfo, encoding: .JSON).responseString { (request, response, data, reqError) -> Void in
             if(response?.statusCode == 200){
                 self.extractUserDataFromResponse(data)
                 
@@ -59,7 +59,8 @@ class GeoMarketAPI{
             "password": password
         ]
         
-        Alamofire.request(.POST, "http://geomarket.me:3001/users/login", parameters: userInfo, encoding: .JSON).responseString{ (request, response, data, reqError) -> Void in
+        Alamofire.request(.POST, "\(GeoMarketAPI.sharedInstance.baseURL)/users/login", parameters: userInfo, encoding: .JSON).responseString{ (request, response, data, reqError) -> Void in
+            println(response)
             if(response?.statusCode == 200){
                 self.extractUserDataFromResponse(data)
      
@@ -93,6 +94,65 @@ class GeoMarketAPI{
     
     init(user: User?){
         self.user = user
+    }
+    
+    func postAd(title:NSString, descript: NSString, price: Float, success: ((adID:NSString)->())?, error: (()->())?){
+        let adInfo = [
+            "title": title,
+            "price": price,
+            "description": descript,
+            "accessToken": GeoMarketAPI.sharedInstance.user?.authToken as NSString!
+        ]
+        Alamofire.request(.POST, "\(GeoMarketAPI.sharedInstance.baseURL)/ads", parameters: adInfo, encoding: .JSON).responseString{ (request, response, data, reqError) -> Void in
+            println(response)
+            if(response?.statusCode == 200){
+                
+                var convertedData: NSData = (data! as String).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
+                var responseJSON : NSDictionary = NSJSONSerialization.JSONObjectWithData(convertedData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                var adID = responseJSON["data"]!["ad"]!?["_id"] as NSString
+                
+                if(success != nil){
+                    success!(adID: adID)
+                }
+            }else{
+                // User failed authentication
+                if(error != nil)
+                {
+                    error!();
+                }
+            }
+            
+        }
+    }
+    
+    func postAdImage(adID:NSString, image:UIImage, success: (()->())?, error: (()->())?){
+            
+        var tempPath:String? = NSTemporaryDirectory()!.stringByAppendingPathComponent("tmp.png")
+        
+        UIImagePNGRepresentation(image).writeToFile(tempPath!, atomically: true)
+        
+        var url: NSURL = NSURL(string: tempPath!)
+        
+        Alamofire.upload(.POST, "\(GeoMarketAPI.sharedInstance.baseURL)/ads/\(adID)/\(GeoMarketAPI.sharedInstance.user?.authToken as NSString!)", url).progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
+            println(totalBytesWritten)
+            }
+            .responseString{ (request, response, data, reqError) -> Void in
+                println(response)
+                if(response?.statusCode == 200){
+                    
+                    if(success != nil){
+                        success!()
+                    }
+                }else{
+                    // User failed authentication
+                    if(error != nil)
+                    {
+                        error!();
+                    }
+                }
+            }
+        
+        
     }
     
 }

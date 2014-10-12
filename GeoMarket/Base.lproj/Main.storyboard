@@ -33,6 +33,9 @@
                                                     <rect key="frame" x="8" y="8" width="584" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="DUl-Xi-ep7" id="cdd-ln-lRZ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -52,6 +55,9 @@
                                                     <rect key="frame" x="8" y="8" width="584" height="27"/>
                                                     <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="DUl-Xi-ep7" id="Uhf-UF-hQQ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -110,8 +116,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8zA-76-Haf" id="h2m-7K-e3s">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPD-4L-qLo">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPD-4L-qLo">
                                                     <rect key="frame" x="8" y="9" width="117" height="70"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="117" id="DPl-GS-WZz"/>
                                                         <constraint firstAttribute="height" constant="70" id="VBq-eL-ILf"/>
@@ -166,7 +173,7 @@
                     <connections>
                         <outlet property="descriptionTxt" destination="5NK-AI-1pS" id="zJb-u4-pJ4"/>
                         <outlet property="priceTxt" destination="y15-R9-3NM" id="xR6-AD-mlx"/>
-                        <outlet property="productImg" destination="8zA-76-Haf" id="FpI-ur-anX"/>
+                        <outlet property="productImage" destination="QPD-4L-qLo" id="qnl-1F-zEv"/>
                         <outlet property="selectFromCamRollBtn" destination="4tE-Gn-JOb" id="N52-fn-KrO"/>
                         <outlet property="takePicBtn" destination="lw4-de-bap" id="ZZ2-Nj-yyU"/>
                         <outlet property="titleTxt" destination="3Yg-BB-Q9R" id="NkH-Bl-Otz"/>
@@ -305,9 +312,12 @@
                                 <state key="normal" image="LocalBtn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0uS-Ha-mHd" kind="show" id="lbc-vt-Xo0"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="search for an item" textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I7d-Qg-Ylb">
-                                <rect key="frame" x="169" y="78" width="262" height="25"/>
+                                <rect key="frame" x="169" y="88" width="262" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="UcZ-Zm-2fX"/>
@@ -347,7 +357,7 @@
                             <constraint firstItem="qoD-eI-r7J" firstAttribute="width" secondItem="e64-AK-JOP" secondAttribute="width" id="2GH-5x-vUE"/>
                             <constraint firstAttribute="centerX" secondItem="gLh-nV-sG6" secondAttribute="centerX" id="4oa-r3-8hu"/>
                             <constraint firstItem="qoD-eI-r7J" firstAttribute="top" secondItem="e64-AK-JOP" secondAttribute="top" id="6oS-QO-u3K"/>
-                            <constraint firstItem="Izi-M6-qMc" firstAttribute="top" secondItem="I7d-Qg-Ylb" secondAttribute="bottom" constant="40" id="7aM-LC-sql"/>
+                            <constraint firstItem="Izi-M6-qMc" firstAttribute="top" secondItem="I7d-Qg-Ylb" secondAttribute="bottom" constant="30" id="7aM-LC-sql"/>
                             <constraint firstItem="I7d-Qg-Ylb" firstAttribute="centerX" secondItem="Izi-M6-qMc" secondAttribute="centerX" id="8qs-hE-ssa"/>
                             <constraint firstItem="qoD-eI-r7J" firstAttribute="top" secondItem="oy7-ie-rmK" secondAttribute="bottom" constant="20" id="CeM-c3-wyi"/>
                             <constraint firstItem="Izi-M6-qMc" firstAttribute="leading" secondItem="oy7-ie-rmK" secondAttribute="leading" constant="-32" id="Euf-Ro-JFx"/>
@@ -362,7 +372,7 @@
                             <constraint firstItem="qoD-eI-r7J" firstAttribute="leading" secondItem="Izi-M6-qMc" secondAttribute="leading" constant="-38" id="abd-44-gnP"/>
                             <constraint firstItem="aLZ-LC-FRr" firstAttribute="leading" secondItem="e64-AK-JOP" secondAttribute="trailing" constant="40" id="c1t-KK-UJs"/>
                             <constraint firstItem="e64-AK-JOP" firstAttribute="top" secondItem="gLh-nV-sG6" secondAttribute="bottom" id="cxX-AZ-foY"/>
-                            <constraint firstItem="I7d-Qg-Ylb" firstAttribute="top" secondItem="a9s-aZ-CGX" secondAttribute="bottom" constant="14" id="hsO-o7-kNm"/>
+                            <constraint firstItem="I7d-Qg-Ylb" firstAttribute="top" secondItem="a9s-aZ-CGX" secondAttribute="bottom" constant="24" id="hsO-o7-kNm"/>
                             <constraint firstAttribute="centerX" secondItem="Izi-M6-qMc" secondAttribute="centerX" constant="-0.5" id="jw8-tj-jl5"/>
                             <constraint firstItem="e64-AK-JOP" firstAttribute="top" secondItem="aLZ-LC-FRr" secondAttribute="top" id="pNT-VO-F5m"/>
                             <constraint firstItem="qoD-eI-r7J" firstAttribute="height" secondItem="e64-AK-JOP" secondAttribute="height" id="uF7-ee-ws4"/>
@@ -537,6 +547,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLJ-Mg-7pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1898" y="-380"/>
+        </scene>
+        <!--Ad List View-->
+        <scene sceneID="L1o-cW-AjD">
+            <objects>
+                <collectionViewController title="Ad List View" id="0uS-Ha-mHd" customClass="AdListViewController" customModule="GeoMarket" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7bx-cK-DWD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.9450981021" green="0.95686280729999995" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ux4-Cv-9II">
+                            <size key="itemSize" width="150" height="139"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="adListingCell" id="nqL-M5-94s">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="139"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0uS-Ha-mHd" id="9Zd-1o-4OE"/>
+                            <outlet property="delegate" destination="0uS-Ha-mHd" id="wmE-dK-Mat"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3A-He-ThK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="395"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="DgJ-7w-cQu">
