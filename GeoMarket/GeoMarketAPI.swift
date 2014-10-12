@@ -48,11 +48,20 @@ class GeoMarketAPI{
             "password": password
         ]
         
-        Alamofire.request(.POST, "http://geomarket.me:3001/users/login", parameters: userInfo, encoding: .JSON).responseJSON { (request, response, JSONresponse, error) -> Void in
-            let JSON = JSONresponse as Dictionary<String, NSObject>
-            if(success != nil){
-                GeoMarketAPI.sharedInstance.assignUser(User(authToken: JSON["data"]["user"]["accessToken"]!, username: username))
-                success!()
+        Alamofire.request(.POST, "http://geomarket.me:3001/users/login", parameters: userInfo, encoding: .JSON).responseJSON { (request, response, JSON, error) -> Void in
+            
+            if let jsonResult = JSON as? Dictionary<String, AnyObject>{
+                println(jsonResult)
+                var userToken = jsonResult["data"]!["user"]!
+                println(jsonResult["data"])
+                println(userToken?["accessToken"]!)
+                //GeoMarketAPI.sharedInstance.assignUser(User(authToken: userToken, username: username))
+                
+                if(success != nil){
+                    success!()
+                }
+            }else{
+                // User failed authentication
             }
         }
     }
