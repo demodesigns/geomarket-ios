@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D237598619E9CDB9007FB7C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237598519E9CDB9007FB7C4 /* AppDelegate.swift */; };
+		D237598819E9CDB9007FB7C4 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237598719E9CDB9007FB7C4 /* HomeScreenViewController.swift */; };
+		D237598B19E9CDB9007FB7C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D237598919E9CDB9007FB7C4 /* Main.storyboard */; };
+		D237598D19E9CDB9007FB7C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D237598C19E9CDB9007FB7C4 /* Images.xcassets */; };
+		D237599019E9CDB9007FB7C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D237598E19E9CDB9007FB7C4 /* LaunchScreen.xib */; };
+		D23759A619E9F129007FB7C4 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759A519E9F129007FB7C4 /* NewItemViewController.swift */; };
+		D23759B119EA096C007FB7C4 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759A819EA096C007FB7C4 /* Raleway-Bold.ttf */; };
+		D23759B219EA096C007FB7C4 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759A919EA096C007FB7C4 /* Raleway-ExtraBold.ttf */; };
+		D23759B319EA096C007FB7C4 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759AA19EA096C007FB7C4 /* Raleway-ExtraLight.ttf */; };
+		D23759B419EA096C007FB7C4 /* Raleway-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759AB19EA096C007FB7C4 /* Raleway-Heavy.ttf */; };
+		D23759B519EA096C007FB7C4 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759AC19EA096C007FB7C4 /* Raleway-Light.ttf */; };
+		D23759B619EA096C007FB7C4 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759AD19EA096C007FB7C4 /* Raleway-Medium.ttf */; };
+		D23759B719EA096C007FB7C4 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759AE19EA096C007FB7C4 /* Raleway-Regular.ttf */; };
+		D23759B819EA096C007FB7C4 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759AF19EA096C007FB7C4 /* Raleway-SemiBold.ttf */; };
+		D23759B919EA096C007FB7C4 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759B019EA096C007FB7C4 /* Raleway-Thin.ttf */; };
+		D23759BB19EA1F37007FB7C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759BA19EA1F37007FB7C4 /* LoginViewController.swift */; };
+		D23759BD19EA1F43007FB7C4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759BC19EA1F43007FB7C4 /* SignUpViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D237598019E9CDB9007FB7C4 /* GeoMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D237598419E9CDB9007FB7C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D237598519E9CDB9007FB7C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D237598719E9CDB9007FB7C4 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		D237598A19E9CDB9007FB7C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D237598C19E9CDB9007FB7C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D237598F19E9CDB9007FB7C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D237599A19E9CDB9007FB7C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D237599B19E9CDB9007FB7C4 /* GeoMarketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoMarketTests.swift; sourceTree = "<group>"; };
+		D23759A519E9F129007FB7C4 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		D23759A819EA096C007FB7C4 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		D23759A919EA096C007FB7C4 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D23759AA19EA096C007FB7C4 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		D23759AB19EA096C007FB7C4 /* Raleway-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Heavy.ttf"; sourceTree = "<group>"; };
+		D23759AC19EA096C007FB7C4 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		D23759AD19EA096C007FB7C4 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		D23759AE19EA096C007FB7C4 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		D23759AF19EA096C007FB7C4 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		D23759B019EA096C007FB7C4 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		D23759BA19EA1F37007FB7C4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D23759BC19EA1F43007FB7C4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D23759BE19EA2974007FB7C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D23759BF19EA2974007FB7C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D237597D19E9CDB9007FB7C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D237597719E9CDB9007FB7C4 = {
+			isa = PBXGroup;
+			children = (
+				D23759BE19EA2974007FB7C4 /* CoreGraphics.framework */,
+				D23759BF19EA2974007FB7C4 /* QuartzCore.framework */,
+				D237598219E9CDB9007FB7C4 /* GeoMarket */,
+				D237599819E9CDB9007FB7C4 /* GeoMarketTests */,
+				D237598119E9CDB9007FB7C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D237598119E9CDB9007FB7C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D237598019E9CDB9007FB7C4 /* GeoMarket.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D237598219E9CDB9007FB7C4 /* GeoMarket */ = {
+			isa = PBXGroup;
+			children = (
+				D237598519E9CDB9007FB7C4 /* AppDelegate.swift */,
+				D237598719E9CDB9007FB7C4 /* HomeScreenViewController.swift */,
+				D23759A519E9F129007FB7C4 /* NewItemViewController.swift */,
+				D237598919E9CDB9007FB7C4 /* Main.storyboard */,
+				D237598C19E9CDB9007FB7C4 /* Images.xcassets */,
+				D237598E19E9CDB9007FB7C4 /* LaunchScreen.xib */,
+				D237598319E9CDB9007FB7C4 /* Supporting Files */,
+				D23759BA19EA1F37007FB7C4 /* LoginViewController.swift */,
+				D23759BC19EA1F43007FB7C4 /* SignUpViewController.swift */,
+			);
+			path = GeoMarket;
+			sourceTree = "<group>";
+		};
+		D237598319E9CDB9007FB7C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D23759A719EA0962007FB7C4 /* Fonts */,
+				D237598419E9CDB9007FB7C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D237599819E9CDB9007FB7C4 /* GeoMarketTests */ = {
+			isa = PBXGroup;
+			children = (
+				D237599B19E9CDB9007FB7C4 /* GeoMarketTests.swift */,
+				D237599919E9CDB9007FB7C4 /* Supporting Files */,
+			);
+			path = GeoMarketTests;
+			sourceTree = "<group>";
+		};
+		D237599919E9CDB9007FB7C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D237599A19E9CDB9007FB7C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D23759A719EA0962007FB7C4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D23759A819EA096C007FB7C4 /* Raleway-Bold.ttf */,
+				D23759A919EA096C007FB7C4 /* Raleway-ExtraBold.ttf */,
+				D23759AA19EA096C007FB7C4 /* Raleway-ExtraLight.ttf */,
+				D23759AB19EA096C007FB7C4 /* Raleway-Heavy.ttf */,
+				D23759AC19EA096C007FB7C4 /* Raleway-Light.ttf */,
+				D23759AD19EA096C007FB7C4 /* Raleway-Medium.ttf */,
+				D23759AE19EA096C007FB7C4 /* Raleway-Regular.ttf */,
+				D23759AF19EA096C007FB7C4 /* Raleway-SemiBold.ttf */,
+				D23759B019EA096C007FB7C4 /* Raleway-Thin.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D237597F19E9CDB9007FB7C4 /* GeoMarket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D237599F19E9CDB9007FB7C4 /* Build configuration list for PBXNativeTarget "GeoMarket" */;
+			buildPhases = (
+				D237597C19E9CDB9007FB7C4 /* Sources */,
+				D237597D19E9CDB9007FB7C4 /* Frameworks */,
+				D237597E19E9CDB9007FB7C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoMarket;
+			productName = GeoMarket;
+			productReference = D237598019E9CDB9007FB7C4 /* GeoMarket.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D237597819E9CDB9007FB7C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = GJ2;
+				TargetAttributes = {
+					D237597F19E9CDB9007FB7C4 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = J46SJ44P22;
+					};
+				};
+			};
+			buildConfigurationList = D237597B19E9CDB9007FB7C4 /* Build configuration list for PBXProject "GeoMarket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D237597719E9CDB9007FB7C4;
+			productRefGroup = D237598119E9CDB9007FB7C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D237597F19E9CDB9007FB7C4 /* GeoMarket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D237597E19E9CDB9007FB7C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D237598B19E9CDB9007FB7C4 /* Main.storyboard in Resources */,
+				D23759B719EA096C007FB7C4 /* Raleway-Regular.ttf in Resources */,
+				D23759B419EA096C007FB7C4 /* Raleway-Heavy.ttf in Resources */,
+				D23759B219EA096C007FB7C4 /* Raleway-ExtraBold.ttf in Resources */,
+				D23759B319EA096C007FB7C4 /* Raleway-ExtraLight.ttf in Resources */,
+				D23759B619EA096C007FB7C4 /* Raleway-Medium.ttf in Resources */,
+				D237599019E9CDB9007FB7C4 /* LaunchScreen.xib in Resources */,
+				D237598D19E9CDB9007FB7C4 /* Images.xcassets in Resources */,
+				D23759B119EA096C007FB7C4 /* Raleway-Bold.ttf in Resources */,
+				D23759B919EA096C007FB7C4 /* Raleway-Thin.ttf in Resources */,
+				D23759B519EA096C007FB7C4 /* Raleway-Light.ttf in Resources */,
+				D23759B819EA096C007FB7C4 /* Raleway-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D237597C19E9CDB9007FB7C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D23759BB19EA1F37007FB7C4 /* LoginViewController.swift in Sources */,
+				D237598819E9CDB9007FB7C4 /* HomeScreenViewController.swift in Sources */,
+				D237598619E9CDB9007FB7C4 /* AppDelegate.swift in Sources */,
+				D23759A619E9F129007FB7C4 /* NewItemViewController.swift in Sources */,
+				D23759BD19EA1F43007FB7C4 /* SignUpViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D237598919E9CDB9007FB7C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D237598A19E9CDB9007FB7C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D237598E19E9CDB9007FB7C4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D237598F19E9CDB9007FB7C4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D237599D19E9CDB9007FB7C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D237599E19E9CDB9007FB7C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D23759A019E9CDB9007FB7C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GeoMarket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D23759A119E9CDB9007FB7C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GeoMarket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D237597B19E9CDB9007FB7C4 /* Build configuration list for PBXProject "GeoMarket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D237599D19E9CDB9007FB7C4 /* Debug */,
+				D237599E19E9CDB9007FB7C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D237599F19E9CDB9007FB7C4 /* Build configuration list for PBXNativeTarget "GeoMarket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23759A019E9CDB9007FB7C4 /* Debug */,
+				D23759A119E9CDB9007FB7C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D237597819E9CDB9007FB7C4 /* Project object */;
+}
