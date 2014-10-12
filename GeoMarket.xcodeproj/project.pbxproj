@@ -27,6 +27,7 @@
 		D23759D419EA42D8007FB7C4 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D319EA42D8007FB7C4 /* Alamofire.swift */; };
 		D23759D619EA47E3007FB7C4 /* GeoMarketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D519EA47E3007FB7C4 /* GeoMarketAPI.swift */; };
 		D23759D819EA5A21007FB7C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D719EA5A21007FB7C4 /* User.swift */; };
+		D23759DA19EA8425007FB7C4 /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		D23759D319EA42D8007FB7C4 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		D23759D519EA47E3007FB7C4 /* GeoMarketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoMarketAPI.swift; sourceTree = "<group>"; };
 		D23759D719EA5A21007FB7C4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				D23759BC19EA1F43007FB7C4 /* SignUpViewController.swift */,
 				D23759D519EA47E3007FB7C4 /* GeoMarketAPI.swift */,
 				D23759D719EA5A21007FB7C4 /* User.swift */,
+				D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */,
 			);
 			path = GeoMarket;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				D23759D619EA47E3007FB7C4 /* GeoMarketAPI.swift in Sources */,
 				D23759A619E9F129007FB7C4 /* NewItemViewController.swift in Sources */,
 				D23759BD19EA1F43007FB7C4 /* SignUpViewController.swift in Sources */,
+				D23759DA19EA8425007FB7C4 /* ForgottenPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
