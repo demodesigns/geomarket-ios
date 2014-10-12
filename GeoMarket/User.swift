@@ -8,10 +8,10 @@
 
 import Foundation
 
-class User {
+class User : NSObject {
     
-    var authToken: String = ""
-    var username: String = ""
+    var authToken: String? = ""
+    var username: String? = ""
     
     init(authToken:String, username: String) {
         self.authToken = authToken

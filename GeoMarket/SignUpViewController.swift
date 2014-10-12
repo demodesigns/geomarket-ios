@@ -22,8 +22,17 @@ class SignUpViewController : UIViewController{
     }
     
     @IBAction func registerUser(sender: AnyObject) {
-        GeoMarketAPI.registerUser(usernameTxt.text, email: emailTxt.text, password: passwordTxt.text, success: {()-> Void in
+        GeoMarketAPI.registerUser(usernameTxt.text, email: emailTxt.text, password: passwordTxt.text, success: {()-> () in
             self.presentingViewController!.presentingViewController!.dismissViewControllerAnimated(true, nil)
+        },
+            error: {() -> () in
+                var alert : UIAlertView = UIAlertView(title: "Registration Failed", message: "Please be sure to fill\nall required fields", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
         })
     }
+    
+    @IBAction func cancelRegistration(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }

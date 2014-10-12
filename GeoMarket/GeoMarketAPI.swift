@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import Alamofire
 
 class GeoMarketAPI{
@@ -28,46 +29,66 @@ class GeoMarketAPI{
         return Static.instance!
     }
     
-    class func registerUser(username:String, email:String, password:String, success:(()->())?){
+    class func registerUser(username:String, email:String, password:String, success:(()->())?, error:(()->())?){
         let userInfo = [
             "email": email,
             "username": username,
             "password": password
         ]
         
-        Alamofire.request(.POST, "http://geomarket.me:3001/users/create", parameters: userInfo, encoding: .JSON).responseJSON { (request, response, data, error) -> Void in
-            if(success != nil){
-                success!()
+        Alamofire.request(.POST, "http://geomarket.me:3001/users/create", parameters: userInfo, encoding: .JSON).responseString { (request, response, data, reqError) -> Void in
+            if(response?.statusCode == 200){
+                self.extractUserDataFromResponse(data)
+                
+                if(success != nil && self.sharedInstance.user != nil){
+                    success!()
+                }
+            }else{
+                // User failed authentication
+                if(error != nil)
+                {
+                    error!();
+                }
             }
         }
     }
     
-    class func loginUser(username:String, password:String, success:(()->())?){
+    class func loginUser(username:String, password:String, success:(()->())?, error:(()->())?){
         let userInfo = [
             "username": username,
             "password": password
         ]
         
-        Alamofire.request(.POST, "http://geomarket.me:3001/users/login", parameters: userInfo, encoding: .JSON).responseJSON { (request, response, JSON, error) -> Void in
-            
-            if let jsonResult = JSON as? Dictionary<String, AnyObject>{
-                println(jsonResult)
-                var userToken = jsonResult["data"]!["user"]!
-                println(jsonResult["data"])
-                println(userToken?["accessToken"]!)
-                //GeoMarketAPI.sharedInstance.assignUser(User(authToken: userToken, username: username))
-                
-                if(success != nil){
+        Alamofire.request(.POST, "http://geomarket.me:3001/users/login", parameters: userInfo, encoding: .JSON).responseString{ (request, response, data, reqError) -> Void in
+            if(response?.statusCode == 200){
+                self.extractUserDataFromResponse(data)
+     
+                if(success != nil && self.sharedInstance.user != nil){
                     success!()
                 }
             }else{
                 // User failed authentication
+                if(error != nil)
+                {
+                    error!();
+                }
             }
+            
         }
+        
     }
     
     func assignUser(user:User){
         self.user = user
+    }
+    
+    class func extractUserDataFromResponse(data:String?){
+        var convertedData: NSData = (data! as String).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
+        var responseJSON : NSDictionary = NSJSONSerialization.JSONObjectWithData(convertedData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        var authToken = responseJSON["data"]!["user"]!?["accessToken"] as NSString
+        var username = responseJSON["data"]!["user"]!?["username"] as NSString
+        
+        GeoMarketAPI.sharedInstance.assignUser(User(authToken: authToken, username: username))
     }
     
     init(user: User?){

@@ -21,6 +21,10 @@ class LoginViewController : UIViewController{
     @IBAction func loginUser(sender: AnyObject) {
         GeoMarketAPI.loginUser(usernameTxt.text, password: passwordTxt.text, success: { () -> () in
             self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
+        },
+        error: {() -> () in
+            var alert : UIAlertView = UIAlertView(title: "Authentication Failed", message: "Please check your\nusername and password", delegate: nil, cancelButtonTitle: "OK")
+            alert.show()
         })
     }
 }
