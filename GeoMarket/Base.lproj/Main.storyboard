@@ -440,7 +440,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Vlh-r0-mBs" kind="presentation" id="yG6-GO-hMs"/>
+                                    <segue destination="Vlh-r0-mBs" kind="presentation" modalTransitionStyle="crossDissolve" id="yG6-GO-hMs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -536,7 +536,7 @@
                                     <constraint firstAttribute="width" constant="300" id="nkq-Rh-AIW"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-Oz-CZM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-Oz-CZM">
                                 <rect key="frame" x="337" y="539" width="57" height="30"/>
                                 <state key="normal" title="Register">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -577,7 +577,7 @@
                             <constraint firstItem="289-2l-gD0" firstAttribute="top" secondItem="ZGg-C2-XdX" secondAttribute="bottom" constant="8" id="3aV-8y-2ad"/>
                             <constraint firstItem="ZGg-C2-XdX" firstAttribute="centerX" secondItem="DRH-U5-2ha" secondAttribute="centerX" constant="-4.5" id="4ug-CY-ajF"/>
                             <constraint firstItem="ZGg-C2-XdX" firstAttribute="top" secondItem="5gx-iu-0F6" secondAttribute="bottom" constant="8" id="5sb-Pw-pgr"/>
-                            <constraint firstItem="289-2l-gD0" firstAttribute="centerX" secondItem="gaM-Oz-CZM" secondAttribute="centerX" id="714-rl-he2"/>
+                            <constraint firstItem="289-2l-gD0" firstAttribute="centerX" secondItem="gaM-Oz-CZM" secondAttribute="centerX" constant="-65" id="714-rl-he2"/>
                             <constraint firstItem="SG5-ZB-Rsi" firstAttribute="top" secondItem="rU8-ej-hcc" secondAttribute="bottom" constant="66" id="8xR-w9-I0g"/>
                             <constraint firstItem="K1r-m7-WQU" firstAttribute="top" secondItem="5gx-iu-0F6" secondAttribute="bottom" constant="8" id="CoT-AL-5ZO"/>
                             <constraint firstAttribute="centerX" secondItem="5gx-iu-0F6" secondAttribute="centerX" id="D2e-Z4-MnK"/>
