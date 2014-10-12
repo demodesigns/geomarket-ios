@@ -14,7 +14,6 @@ class GeoMarketAPI{
     
     var baseURL = "http://geomarket.me:3001" //"http://172.31.183.102:3001"
     var user : User?
-    var distamce: Float? = 0.0
     
     
     //Create a singleton instance

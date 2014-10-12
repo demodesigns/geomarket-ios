@@ -19,6 +19,7 @@ class AdListViewController : UITableViewController, UITableViewDelegate, UITable
         if(self.searchType == ""){
             GeoMarketAPI.sharedInstance.getLocalAds({ (options:NSArray) -> () in
                 self.options = options
+                println(options)
                 self.tableView.reloadData()
                 }, error: { () -> () in
                     println("fail")
@@ -35,16 +36,7 @@ class AdListViewController : UITableViewController, UITableViewDelegate, UITable
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        /*var cell : AdListingCellViewController  = tableView.dequeueReusableCellWithIdentifier("adListCell")
-        cell.productTitle.text = options[indexPath.row].objectForKey("title")
-        cell.productPrice.text = options[indexPath.row].objectForKey("price")
-        cell.productDescription.text = options[indexPath.row].objectForKey("description")
-        var imgData:NSData = NSData(contentsOfURL: options[indexPath.row].objectForKey("image")
-            cell.productImage.image = UIImage(data: imgData)
-        return cell
-        */
-    }
+
     
     
 }
