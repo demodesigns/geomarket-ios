@@ -51,6 +51,12 @@ class HomeScreenViewController : UIViewController, UITextFieldDelegate{
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //if(segue.identifier == "adListSegue"){
+            //(segue.destinationViewController as AdListViewController).searchType = "Local"
+        //}
+    }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }

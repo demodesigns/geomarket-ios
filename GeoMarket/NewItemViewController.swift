@@ -31,14 +31,6 @@ class NewItemViewController: UITableViewController, UITextViewDelegate, UITextFi
         }
         return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
         
-//        var gradient: CAGradientLayer = CAGradientLayer()
-//        gradient.frame = view.bounds;
-//        gradient.colors = [UIColor(red: 0.102, green: 0.161, blue: 0.502, alpha: 1.0),UIColor(red: 0.149, green: 0.816, blue: 0.808, alpha: 1.0)]
-//        gradient.locations = [0.0,1.0]
-//        self.tableView.backgroundView = UIView(frame: self.tableView.frame)
-//        var backgroundView : UIView = self.tableView.backgroundView!
-//        backgroundView.layer.insertSublayer(gradient, atIndex: 1)
-        
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
