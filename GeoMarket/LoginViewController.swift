@@ -13,6 +13,9 @@ class LoginViewController : UIViewController{
 
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
+    
+    var keyboardVisible: Bool = false
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
@@ -42,19 +45,25 @@ class LoginViewController : UIViewController{
     
     func keyboardWillShow(sender: NSNotification) {
         if let info: NSDictionary = sender.userInfo {
-            let value: NSValue = info.valueForKey(UIKeyboardFrameEndUserInfoKey) as NSValue
-            var rect: CGRect = value.CGRectValue()
-            rect = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - rect.size.height, self.view.frame.size.width, self.view.frame.size.height)
-            self.view.frame = rect
+            if(!keyboardVisible){
+                keyboardVisible = true
+                let value: NSValue = info.valueForKey(UIKeyboardFrameEndUserInfoKey) as NSValue
+                var rect: CGRect = value.CGRectValue()
+                rect = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - rect.size.height, self.view.frame.size.width, self.view.frame.size.height)
+                self.view.frame = rect
+            }
         }
     }
     
     func keyboardWillHide(sender: NSNotification) {
         if let info: NSDictionary = sender.userInfo {
-            let value: NSValue = info.valueForKey(UIKeyboardFrameEndUserInfoKey) as NSValue
-            var rect: CGRect = value.CGRectValue()
-            rect = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + rect.size.height, self.view.frame.size.width, self.view.frame.size.height)
-            self.view.frame = rect
+            if(keyboardVisible){
+                keyboardVisible = false
+                let value: NSValue = info.valueForKey(UIKeyboardFrameEndUserInfoKey) as NSValue
+                var rect: CGRect = value.CGRectValue()
+                rect = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + rect.size.height, self.view.frame.size.width, self.view.frame.size.height)
+                self.view.frame = rect
+            }
         }
     }
 }

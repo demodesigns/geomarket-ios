@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeoMarket/GeoMarketAPI.swift"
-            timestampString = "434819941.757203"
+            timestampString = "434822124.444254"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "getLocalAds(_:error:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "loginUser(_:password:success:error:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

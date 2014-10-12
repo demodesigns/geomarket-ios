@@ -12,9 +12,10 @@ import Alamofire
 
 class GeoMarketAPI{
     
-    var baseURL = "http://geomarket.me:3001" //"http://172.31.183.102:3001"
+    var baseURL = "http://geomarket.me:3001"
     var user : User?
-    
+    var distance : Float? = 25.0
+
     
     //Create a singleton instance
     class var sharedInstance : GeoMarketAPI {

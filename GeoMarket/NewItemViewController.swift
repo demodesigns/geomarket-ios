@@ -59,15 +59,15 @@ class NewItemViewController: UITableViewController, UITextViewDelegate, UITextFi
         GeoMarketAPI.sharedInstance.postAd(titleTxt.text, descript: descriptionTxt.text, price: (priceTxt.text as NSString).floatValue, success: { (adID:NSString) -> () in
             
             GeoMarketAPI.sharedInstance.postAdImage(adID, image: self.productImage.image!, success: { () -> () in
-                
+                self.navigationController?.popViewControllerAnimated(true)
+                return
             }, error: { () -> () in
                 
             })
             
-        }) { () -> () in
+            }, error: { () -> () in
             
-        }
-        
+            })
     }
     
     @IBAction func selectFromCameraRoll(sender: AnyObject) {
