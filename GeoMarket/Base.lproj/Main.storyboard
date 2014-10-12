@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1A5-5i-CC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1A5-5i-CC9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -103,6 +103,51 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Product Image" id="8GO-Eu-H57">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="87" id="8zA-76-Haf">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8zA-76-Haf" id="h2m-7K-e3s">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPD-4L-qLo">
+                                                    <rect key="frame" x="8" y="9" width="117" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="117" id="DPl-GS-WZz"/>
+                                                        <constraint firstAttribute="height" constant="70" id="VBq-eL-ILf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tE-Gn-JOb">
+                                                    <rect key="frame" x="425" y="8" width="167" height="30"/>
+                                                    <state key="normal" title="Select from Camera Roll">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="selectFromCameraRoll:" destination="DUl-Xi-ep7" eventType="touchUpInside" id="Uo3-ie-Tgo"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lw4-de-bap">
+                                                    <rect key="frame" x="508" y="48" width="84" height="30"/>
+                                                    <state key="normal" title="Take Picture">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="takePic:" destination="DUl-Xi-ep7" eventType="touchUpInside" id="38O-nH-p4G"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4tE-Gn-JOb" firstAttribute="trailing" secondItem="h2m-7K-e3s" secondAttribute="trailingMargin" id="9bz-af-yqo"/>
+                                                <constraint firstItem="QPD-4L-qLo" firstAttribute="leading" secondItem="h2m-7K-e3s" secondAttribute="leadingMargin" id="MvZ-To-bcG"/>
+                                                <constraint firstItem="lw4-de-bap" firstAttribute="trailing" secondItem="h2m-7K-e3s" secondAttribute="trailingMargin" id="f1n-jn-evR"/>
+                                                <constraint firstItem="QPD-4L-qLo" firstAttribute="top" secondItem="4tE-Gn-JOb" secondAttribute="top" constant="1" id="nG3-AN-Dn6"/>
+                                                <constraint firstItem="QPD-4L-qLo" firstAttribute="top" secondItem="h2m-7K-e3s" secondAttribute="topMargin" constant="1" id="os9-Rj-MfN"/>
+                                                <constraint firstItem="lw4-de-bap" firstAttribute="bottom" secondItem="QPD-4L-qLo" secondAttribute="bottom" constant="-1" id="ptQ-Ph-WaI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="DUl-Xi-ep7" id="BkX-lx-MKk"/>
@@ -121,12 +166,15 @@
                     <connections>
                         <outlet property="descriptionTxt" destination="5NK-AI-1pS" id="zJb-u4-pJ4"/>
                         <outlet property="priceTxt" destination="y15-R9-3NM" id="xR6-AD-mlx"/>
+                        <outlet property="productImg" destination="8zA-76-Haf" id="FpI-ur-anX"/>
+                        <outlet property="selectFromCamRollBtn" destination="4tE-Gn-JOb" id="N52-fn-KrO"/>
+                        <outlet property="takePicBtn" destination="lw4-de-bap" id="ZZ2-Nj-yyU"/>
                         <outlet property="titleTxt" destination="3Yg-BB-Q9R" id="NkH-Bl-Otz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5J-V0-8cI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="399"/>
+            <point key="canvasLocation" x="1018" y="395"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JXl-KG-DKF">
@@ -440,7 +488,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Vlh-r0-mBs" kind="presentation" modalTransitionStyle="crossDissolve" id="yG6-GO-hMs"/>
+                                    <segue destination="Vlh-r0-mBs" kind="presentation" modalTransitionStyle="flipHorizontal" id="yG6-GO-hMs"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -24,11 +24,57 @@
 		D23759B919EA096C007FB7C4 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23759B019EA096C007FB7C4 /* Raleway-Thin.ttf */; };
 		D23759BB19EA1F37007FB7C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759BA19EA1F37007FB7C4 /* LoginViewController.swift */; };
 		D23759BD19EA1F43007FB7C4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759BC19EA1F43007FB7C4 /* SignUpViewController.swift */; };
-		D23759D419EA42D8007FB7C4 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D319EA42D8007FB7C4 /* Alamofire.swift */; };
 		D23759D619EA47E3007FB7C4 /* GeoMarketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D519EA47E3007FB7C4 /* GeoMarketAPI.swift */; };
 		D23759D819EA5A21007FB7C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D719EA5A21007FB7C4 /* User.swift */; };
 		D23759DA19EA8425007FB7C4 /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */; };
+		D23759EE19EA995F007FB7C4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23759E319EA9906007FB7C4 /* Alamofire.framework */; };
+		D23759EF19EA995F007FB7C4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D23759E319EA9906007FB7C4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D23759E219EA9906007FB7C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		D23759E419EA9906007FB7C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		D23759EB19EA9949007FB7C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		D23759F019EA995F007FB7C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D23759F219EA995F007FB7C4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D23759EF19EA995F007FB7C4 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D237598019E9CDB9007FB7C4 /* GeoMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,10 +100,10 @@
 		D23759BC19EA1F43007FB7C4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D23759BE19EA2974007FB7C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D23759BF19EA2974007FB7C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D23759D319EA42D8007FB7C4 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		D23759D519EA47E3007FB7C4 /* GeoMarketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoMarketAPI.swift; sourceTree = "<group>"; };
 		D23759D719EA5A21007FB7C4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D23759D919EA8425007FB7C4 /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
+		D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23759EE19EA995F007FB7C4 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +121,7 @@
 		D237597719E9CDB9007FB7C4 = {
 			isa = PBXGroup;
 			children = (
+				D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */,
 				D23759BE19EA2974007FB7C4 /* CoreGraphics.framework */,
 				D23759BF19EA2974007FB7C4 /* QuartzCore.framework */,
 				D237598219E9CDB9007FB7C4 /* GeoMarket */,
@@ -93,7 +141,6 @@
 		D237598219E9CDB9007FB7C4 /* GeoMarket */ = {
 			isa = PBXGroup;
 			children = (
-				D23759D319EA42D8007FB7C4 /* Alamofire.swift */,
 				D237598519E9CDB9007FB7C4 /* AppDelegate.swift */,
 				D237598719E9CDB9007FB7C4 /* HomeScreenViewController.swift */,
 				D23759A519E9F129007FB7C4 /* NewItemViewController.swift */,
@@ -152,6 +199,15 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		D23759DE19EA9905007FB7C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D23759E319EA9906007FB7C4 /* Alamofire.framework */,
+				D23759E519EA9906007FB7C4 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,10 +218,13 @@
 				D237597C19E9CDB9007FB7C4 /* Sources */,
 				D237597D19E9CDB9007FB7C4 /* Frameworks */,
 				D237597E19E9CDB9007FB7C4 /* Resources */,
+				D23759F219EA995F007FB7C4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D23759EC19EA9949007FB7C4 /* PBXTargetDependency */,
+				D23759F119EA995F007FB7C4 /* PBXTargetDependency */,
 			);
 			name = GeoMarket;
 			productName = GeoMarket;
@@ -198,12 +257,35 @@
 			mainGroup = D237597719E9CDB9007FB7C4;
 			productRefGroup = D237598119E9CDB9007FB7C4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D23759DE19EA9905007FB7C4 /* Products */;
+					ProjectRef = D23759DD19EA9905007FB7C4 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D237597F19E9CDB9007FB7C4 /* GeoMarket */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D23759E319EA9906007FB7C4 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = D23759E219EA9906007FB7C4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D23759E519EA9906007FB7C4 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = D23759E419EA9906007FB7C4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D237597E19E9CDB9007FB7C4 /* Resources */ = {
@@ -232,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23759D419EA42D8007FB7C4 /* Alamofire.swift in Sources */,
 				D23759BB19EA1F37007FB7C4 /* LoginViewController.swift in Sources */,
 				D237598819E9CDB9007FB7C4 /* HomeScreenViewController.swift in Sources */,
 				D237598619E9CDB9007FB7C4 /* AppDelegate.swift in Sources */,
@@ -245,6 +326,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D23759EC19EA9949007FB7C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = D23759EB19EA9949007FB7C4 /* PBXContainerItemProxy */;
+		};
+		D23759F119EA995F007FB7C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = D23759F019EA995F007FB7C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D237598919E9CDB9007FB7C4 /* Main.storyboard */ = {

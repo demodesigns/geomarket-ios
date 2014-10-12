@@ -11,10 +11,13 @@ import UIKit
 import QuartzCore
 import CoreGraphics
 
-class NewItemViewController: UITableViewController, UITextViewDelegate {
+class NewItemViewController: UITableViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var descriptionTxt: UITextView!
     @IBOutlet weak var priceTxt: UITextField!
     @IBOutlet weak var titleTxt: UITextField!
+    @IBOutlet weak var productImg: UITableViewCell!
+    @IBOutlet weak var selectFromCamRollBtn: UIButton!
+    @IBOutlet weak var takePicBtn: UIButton!
     
     
     override func viewWillAppear(animated: Bool) {
@@ -53,6 +56,27 @@ class NewItemViewController: UITableViewController, UITextViewDelegate {
     
     @IBAction func postForSale(sender: AnyObject) {
         self.hideKeyboard()
+    }
+    
+    @IBAction func selectFromCameraRoll(sender: AnyObject) {
+        var picker : UIImagePickerController = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
+        self.presentViewController(picker, animated: true, completion: nil);
+    }
+    
+    @IBAction func takePic(sender: AnyObject) {
+        var picker : UIImagePickerController = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = UIImagePickerControllerSourceType.Camera;
+        self.presentViewController(picker, animated: true, completion: nil);
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary) {
+        var chosenImage:UIImage = editingInfo[UIImagePickerControllerEditedImage] as UIImage;
+        productImg.imageView?.image = chosenImage;
     }
     
     func hideKeyboard() -> Void{
