@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1A5-5i-CC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Do-GC-WQS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,9 +19,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="MRJ-Lk-sAG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9450981021" green="0.95686280729999995" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="New Item Information" id="GqZ-tO-Df0">
+                            <tableViewSection headerTitle="Basic Item Information" id="GqZ-tO-Df0">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8s7-eb-vRi">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -110,6 +110,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Sell Item" id="aFY-Hr-FDi">
                         <barButtonItem key="rightBarButtonItem" title="Post For Sale" id="Q1p-M4-w9s">
+                            <color key="tintColor" red="0.0078431377190000002" green="0.79215693470000004" blue="1" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <action selector="postForSale:" destination="DUl-Xi-ep7" id="ihC-AZ-rkU"/>
                             </connections>
@@ -298,10 +299,10 @@
             </objects>
             <point key="canvasLocation" x="1072" y="-380"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="PHU-3C-cHh">
             <objects>
-                <viewController id="6Do-GC-WQS" sceneMemberID="viewController">
+                <viewController id="6Do-GC-WQS" customClass="LoginViewController" customModule="GeoMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hYS-cp-4FL"/>
                         <viewControllerLayoutGuide type="bottom" id="mVE-vM-fG5"/>
@@ -404,10 +405,10 @@
             </objects>
             <point key="canvasLocation" x="1898" y="-380"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="DgJ-7w-cQu">
             <objects>
-                <viewController id="dkN-DC-3be" sceneMemberID="viewController">
+                <viewController id="dkN-DC-3be" customClass="SignUpViewController" customModule="GeoMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rU8-ej-hcc"/>
                         <viewControllerLayoutGuide type="bottom" id="0R7-GY-b9X"/>
@@ -455,6 +456,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerUser:" destination="dkN-DC-3be" eventType="touchUpInside" id="LXL-re-BtC"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SG5-ZB-Rsi">
                                 <rect key="frame" x="207" y="86" width="187" height="264"/>
@@ -520,6 +524,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="K1r-m7-WQU" id="koN-pw-4lg"/>
+                        <outlet property="passwordTxt" destination="289-2l-gD0" id="WAa-fe-O5x"/>
+                        <outlet property="usernameTxt" destination="ZGg-C2-XdX" id="Rxb-mN-8DQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVv-M5-k6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

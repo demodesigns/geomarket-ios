@@ -11,9 +11,15 @@ import UIKit
 
 class SignUpViewController : UIViewController{
     
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var usernameTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
     }
     
+    @IBAction func registerUser(sender: AnyObject) {
+    }
 }

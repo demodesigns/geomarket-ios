@@ -11,8 +11,9 @@ import UIKit
 
 class LoginViewController : UIViewController{
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.Default
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
     }
     
 }
